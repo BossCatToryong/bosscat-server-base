@@ -11,7 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/products")
 @Tag(name = "Product Controller", description = "상품 관리 API")
-@CrossOrigin(origins = "http://localhost")
+@CrossOrigin(origins = "http://localhost:3000")
 public class ProductController {
 
     private final ProductService productService;
