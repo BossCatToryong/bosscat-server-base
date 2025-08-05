@@ -14,6 +14,6 @@ public class HelloController {
     @GetMapping("/hello")
     @Operation(summary = "Hello 메시지 반환", description = "간단한 인사말을 반환합니다.")
     public String hello() {
-        return "Hello, Spring Boot with sicksick!";
+        return "Hello, Spring Boot with sicksgo!";
     }
 } 
