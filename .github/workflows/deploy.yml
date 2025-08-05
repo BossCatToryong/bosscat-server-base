@@ -35,6 +35,8 @@ jobs:
       - name: Build, tag, and push Docker image
         run: |
           IMAGE_TAG=$(date +%s)
+          IMAGE_URI=077672914621.dkr.ecr.ap-northeast-2.amazonaws.com/bosscat:20250805
+
           docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
           docker tag $ECR_REPOSITORY:$IMAGE_TAG ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
           docker push ${{ steps.login-ecr.outputs.registry }}/$ECR_REPOSITORY:$IMAGE_TAG
